@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ir.map.GUI.MessageController">
+    <BorderPane>
+        <center>
+            <fx:define>
+                <Insets fx:id="messageWindowPadding" top="25" left="50"/>
+            </fx:define>
+            <HBox>
+                <VBox padding="$messageWindowPadding" spacing="10">
+                    <Label style="-fx-font-size: 14px; -fx-font-weight: bold" text="Users"/>
+                    <ListView fx:id="messageUsersListView"/>
+                    <HBox spacing="20">
+                        <Pagination fx:id="usersPagination"/>
+                        <ComboBox fx:id="pageSizeUsersComboBox"/>
+                    </HBox>
+                    <RadioButton fx:id="groupConversationOption" text="Group conversation"/>
+                </VBox>
+                <VBox fx:id="messageVBox" padding="$messageWindowPadding" visible="false">
+                    <HBox>
+                        <Label fx:id="messageHeaderLabel" style="-fx-font-size: 14px; -fx-font-weight: bold" wrapText="true" maxWidth="600" HBox.hgrow="ALWAYS"/>
+                        <ComboBox fx:id="messagesComboBox" HBox.hgrow="NEVER"/>
+                    </HBox>
+                    <ListView fx:id="messageListView" prefWidth="600"/>
+                    <HBox spacing="20" alignment="CENTER_RIGHT">
+                        <TextField fx:id="messageTextField" prefWidth="250"/>
+                        <Button fx:id="sendMessage" text="Send" onAction="#handleSendMessage"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+        </center>
+    </BorderPane>
+</StackPane>

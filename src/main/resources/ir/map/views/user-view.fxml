@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.dlsc.formsfx.view.controls.SimpleNumberControl?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="ir.map.GUI.UserController">
+    <BorderPane>
+        <top>
+            <HBox>
+                <Button fx:id="toFriendshipsWindow" text="Friendships" onAction="#handleToFriendshipsWindow"/>
+                <Button fx:id="toMessagesWindow" text="Messages" onAction="#handleToMessagesWindow"/>
+            </HBox>
+        </top>
+        <center>
+            <VBox>
+                <TableView fx:id="tableView" prefWidth="300">
+                    <columns>
+                        <TableColumn fx:id="tableColumnUserId" text="userId"/>
+                        <TableColumn fx:id="tableColumnFirstName" text="firstName"/>
+                        <TableColumn fx:id="tableColumnLastName" text="lastName"/>
+                        <TableColumn fx:id="tableColumnEmail" text="email"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="20">
+                    <Pagination fx:id="pagination"/>
+                    <ComboBox fx:id="pageSizeComboBox"/>
+                </HBox>
+            </VBox>
+        </center>
+    </BorderPane>
+</StackPane>

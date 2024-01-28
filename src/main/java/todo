@@ -1,0 +1,57 @@
+actions on main pane
+    - admin
+        > user table
+        > manage accounts (update, delete)
+
+    - logged user
+       > user table
+       > manage account (update, delete)
+       > friends list
+       > chat
+
+
+✅ chat
+✅ friendships
+
+
+needed changes
+    ✅    - on delete cascade (friendships)
+    ✅    - friendship requests table (pending friendships):
+        * on approve: add friendship + update status (approved)
+        * on reject: update status (rejected)
+    ✅    - from / reply design in GUI
+    ✅    - send a message from one user to multiple users
+
+
+misc changes
+    ✅    - let user change the PAGE_SIZE constant
+    - sign-out button
+    - cannot send another friend request if it was rejected less than 3 days ago
+    - grid pane for label-text field entities
+    - small label with firstname + lastname of logged user
+    ✅    - remove friend from friends list (break friendship)
+    - determine what happens when a user sends another friends request to a user that rejected previous friend request
+    ✅    - when hover above message, show timestamp
+    ✅    - message validator
+    ✅    - check messageFieldText to not be empty
+    ✅    - avoid deselection when sending messages
+    ✅    - don't notify all observers (notify only the needed observer)
+    ✅    - ADD REPLY TO MESSAGE
+    - integrate community in gui
+    - what happens when you reply to a message that already has a reply
+
+    - optimize select from database tables
+        (try to get the needed information directly from table, without findAll and filter in java code)
+    - design
+
+
+
+
+
+
+
+
+
+
+
+

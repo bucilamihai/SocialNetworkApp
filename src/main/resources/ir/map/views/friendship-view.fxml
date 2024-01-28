@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="ir.map.GUI.FriendshipController">
+    <BorderPane>
+        <center>
+            <fx:define>
+                <Insets fx:id="friendshipWindowPadding" top="25" left="50"/>
+            </fx:define>
+            <HBox>
+                <VBox padding="$friendshipWindowPadding">
+                    <Label style="-fx-font-size: 14px; -fx-font-weight: bold" text="Your friends"/>
+                    <ListView fx:id="friendsListView"/>
+                    <HBox spacing="20">
+                        <Pagination fx:id="friendsPagination"/>
+                        <ComboBox fx:id="pageSizeFriendsComboBox"/>
+                    </HBox>
+                    <Button fx:id="breakFriendship" text="Break friendship" onAction="#handleBreakFriendship"/>
+                </VBox>
+                <VBox padding="$friendshipWindowPadding">
+                    <Label style="-fx-font-size: 14px; -fx-font-weight: bold" text="Other users"/>
+                    <ListView fx:id="usersNotFriendWithUserListView"/>
+                    <HBox spacing="20">
+                        <Pagination fx:id="othersPagination"/>
+                        <ComboBox fx:id="pageSizeOthersComboBox"/>
+                    </HBox>
+                    <Button fx:id="sendRequest" text="Send friend request" onAction="#handleSendRequest"/>
+                </VBox>
+                <VBox padding="$friendshipWindowPadding">
+                    <Label style="-fx-font-size: 14px; -fx-font-weight: bold" text="Pending friend requests"/>
+                    <ListView fx:id="pendingRequestsListView"/>
+                    <HBox spacing="20">
+                        <Pagination fx:id="requestsPagination"/>
+                        <ComboBox fx:id="pageSizeRequestsComboBox"/>
+                    </HBox>
+                    <VBox spacing="10">
+                        <Button fx:id="approveRequest" text="Approve request" onAction="#handleApproveRequest"/>
+                        <Button fx:id="rejectRequest" text="Reject request" onAction="#handleRejectRequest"/>
+                    </VBox>
+                </VBox>
+            </HBox>
+        </center>
+    </BorderPane>
+</StackPane>

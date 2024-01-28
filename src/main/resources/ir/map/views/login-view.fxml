@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="ir.map.GUI.LoginController">
+    <BorderPane style="-fx-font-size: 14px">
+        <center>
+            <VBox alignment="CENTER" spacing="10">
+                <Button fx:id="loginIntoAccountButton" text="Login into your account" onAction="#handleLoginBox"/>
+                <Button fx:id="createAccountButton" text="Create an account" onAction="#handleCreateAccountBox"/>
+                <HBox fx:id="firstNameHBox" alignment="CENTER" spacing="10" visible="false">
+                    <Label text="Enter first name"/>
+                    <TextField fx:id="firstNameTextField" />
+                </HBox>
+                <HBox fx:id="lastNameHBox" alignment="CENTER" spacing="10" visible="false">
+                    <Label text="Enter last name"/>
+                    <TextField fx:id="lastNameTextField" />
+                </HBox>
+                <HBox fx:id="emailHBox" alignment="CENTER" spacing="10" visible="false">
+                    <Label text="Enter email"/>
+                    <TextField fx:id="emailTextField" />
+                </HBox>
+                <HBox fx:id="passwordHBox" alignment="CENTER" spacing="10" visible="false">
+                    <Label text="Enter password"/>
+                    <PasswordField fx:id="passwordTextField" />
+                </HBox>
+                <Button fx:id="loginButton" text="Login" onAction="#handleLogin" visible="false"/>
+                <Button fx:id="signUpButton" text="Sign Up" onAction="#handleSignUp" visible="false"/>
+            </VBox>
+        </center>
+    </BorderPane>
+</StackPane>
